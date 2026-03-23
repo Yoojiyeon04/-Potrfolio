@@ -4,68 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>유지연 - 졸업작품</title>
-    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     
     <style>
-        
+        /* 모든 디자인 설정은 이 <style> 태그 안에만 있어야 합니다. */
         body { 
             background-color: #f4f7f9; 
-            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif; 
+            font-family: 'Pretendard', sans-serif; 
             color: #333; 
             margin: 0; 
-            padding: 80px 0; 
+            padding: 60px 20px; 
             display: flex; 
             justify-content: center; 
-            align-items: center; 
             min-height: 100vh; 
         } 
         
         .container { 
-            width: 90%; 
-            max-width: 900px; 
+            width: 100%; 
+            max-width: 800px; 
             text-align: center; 
         } 
-        
-        header h1 { font-size: 2.2rem; margin-bottom: 5px; font-weight: 700; } 
+
+        header h1 { font-size: 2rem; margin-bottom: 10px; font-weight: 700; } 
         header .subtitle { font-size: 1.1rem; color: #666; margin-bottom: 20px; } 
-        .header-line { border: 0; height: 2px; background-color: #2c3e50; margin-bottom: 40px; } 
-        
+        .header-line { border: 0; height: 1.5px; background-color: #333; margin-bottom: 40px; } 
+
         .card { 
             background-color: white; 
             border-radius: 12px; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08); 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05); 
             padding: 40px; 
             text-align: left; 
         } 
         
         .section-title { 
-            font-size: 1.5rem; 
+            font-size: 1.4rem; 
             border-left: 5px solid #2c3e50; 
             padding-left: 15px; 
             margin-bottom: 25px; 
             font-weight: 700;
         } 
 
-        .project-box { border: 1px solid #e0e0e0; border-radius: 8px; padding: 30px; } 
-        .project-name { font-size: 1.3rem; margin-top: 0; margin-bottom: 15px; font-weight: 700; } 
-        .description { line-height: 1.7; color: #444; margin-bottom: 20px; word-break: keep-all; } 
-        
+        .project-box { border: 1px solid #eee; border-radius: 8px; padding: 25px; } 
+        .project-name { font-size: 1.25rem; margin-top: 0; margin-bottom: 15px; font-weight: 700; } 
+        .description { line-height: 1.7; color: #555; margin-bottom: 20px; word-break: keep-all; } 
+
         .tags { margin-bottom: 25px; display: flex; flex-wrap: wrap; gap: 8px; } 
         .tags span { 
-            display: inline-block; 
-            background-color: #e1f0ff; 
+            background-color: #eef6ff; 
             color: #007bff; 
-            padding: 6px 14px; 
-            border-radius: 20px; 
+            padding: 5px 12px; 
+            border-radius: 15px; 
             font-size: 0.85rem; 
             font-weight: 600; 
         } 
-        
-        .features { list-style: none; padding: 0; } 
-        .features li { position: relative; padding-left: 20px; margin-bottom: 10px; line-height: 1.5; } 
-        .features li::before { content: "•"; position: absolute; left: 0; color: #333; font-weight: bold; } 
-        
-        footer { margin-top: 50px; font-size: 0.9rem; color: #888; line-height: 1.5; }
+
+        .features { list-style: none; padding: 0; margin: 0; } 
+        .features li { position: relative; padding-left: 20px; margin-bottom: 10px; font-size: 0.95rem; } 
+        .features li::before { content: "•"; position: absolute; left: 0; font-weight: bold; } 
+
+        footer { margin-top: 50px; font-size: 0.85rem; color: #aaa; line-height: 1.6; }
     </style>
 </head>
 <body>
@@ -93,20 +91,3 @@
                     <span>Data Parsing</span>
                     <span>UI Development</span>
                 </div>
-
-                <ul class="features">
-                    <li><strong>실시간 데이터 연동:</strong> OpenWeather API와의 안정적인 통신 및 데이터 업데이트.</li>
-                    <li><strong>다양한 정보 제공:</strong> 기온, 습도, 체감 온도, 강수 확률 등 포괄적 정보.</li>
-                    <li><strong>사용자 친화적 UI:</strong> 누구나 쉽게 사용할 수 있는 직관적인 인터페이스 설계.</li>
-                </ul>
-            </div>
-        </main>
-
-        <footer>
-            <p>© 2026 Yoo ji-yeon | Halla University</p>
-            <p>Department of Computer Science and Engineering</p>
-        </footer>
-    </div>
-
-</body>
-</html>
