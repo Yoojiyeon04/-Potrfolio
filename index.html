@@ -4,18 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>유지연 - 졸업작품</title>
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
     <style>
         /* 1. 기본 스타일 설정 */
         body {
-            background-color: #f4f7f9;
+            background-color: #f4f7f9; /* 미세한 회색 배경 */
             font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
             color: #333;
             margin: 0;
             padding: 50px 0;
             display: flex;
-            justify-content: center;
-            align-items: center;
+            justify-content: center; /* 가로 중앙 정렬 */
+            align-items: center; /* 세로 중앙 정렬 */
             min-height: 100vh;
+            -webkit-font-smoothing: antialiased; /* 폰트를 더 깔끔하게 */
         }
 
         .container {
@@ -26,21 +28,23 @@
 
         /* 2. 헤더 영역 스타일 */
         header h1 {
-            font-size: 2.2rem;
+            font-size: 2.2rem; /* 글자 크기 확대 */
             margin-bottom: 8px;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.5px; /* 글자 간격 좁힘 */
+            font-weight: 700;
         }
 
         header .subtitle {
             font-size: 1.1rem;
             color: #666;
             margin-bottom: 25px;
+            font-weight: 400;
         }
 
         .header-line {
             border: 0;
             height: 2px;
-            background-color: #2c3e50;
+            background-color: #2c3e50; /* 짙은 남색 선 */
             margin-bottom: 50px;
             width: 100%;
         }
@@ -48,23 +52,23 @@
         /* 3. 메인 카드(흰색 박스) 스타일 */
         .card {
             background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border-radius: 15px; /* 둥근 모서리 */
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05); /* 은은한 그림자 */
             padding: 45px;
-            text-align: left;
+            text-align: left; /* 카드 내부 텍스트는 왼쪽 정렬 */
         }
 
         .section-title {
             font-size: 1.6rem;
-            border-left: 6px solid #2c3e50;
+            border-left: 6px solid #2c3e50; /* 왼쪽 짙은 세로선 */
             padding-left: 15px;
             margin-bottom: 30px;
-            font-weight: bold;
+            font-weight: 700;
         }
 
-        /* 4. 내부 프로젝트 박스 */
+        /* 4. 내부 프로젝트 박스 (회색 테두리) */
         .project-box {
-            border: 1px solid #eee;
+            border: 1px solid #eee; /* 아주 연한 회색 테두리 */
             border-radius: 10px;
             padding: 30px;
         }
@@ -75,50 +79,51 @@
             margin-bottom: 15px;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 10px; /* 아이콘과 텍스트 사이 간격 */
+            font-weight: 700;
         }
 
         .description {
-            line-height: 1.7;
-            color: #555;
+            line-height: 1.7; /* 줄 간격 넓힘 */
+            color: #555; /* 약간 연한 글자색 */
             margin-bottom: 25px;
-            word-break: keep-all;
+            word-break: keep-all; /* 한글 단어 단위 줄 바꿈 */
         }
 
         /* 5. 태그(버튼 형태) 스타일 */
         .tags {
             margin-bottom: 30px;
             display: flex;
-            flex-wrap: wrap;
+            flex-wrap: wrap; /* 태그가 많으면 다음 줄로 */
             gap: 8px;
         }
 
         .tags span {
-            background-color: #e8f2ff;
-            color: #007bff;
+            background-color: #e8f2ff; /* 연한 파란색 배경 */
+            color: #007bff; /* 파란색 글자 */
             padding: 6px 14px;
-            border-radius: 20px;
+            border-radius: 20px; /* 둥근 버튼 */
             font-size: 0.85rem;
             font-weight: 600;
         }
 
         /* 6. 리스트 스타일 */
         .features {
-            list-style: none;
+            list-style: none; /* 기본 불릿 제거 */
             padding: 0;
             margin: 0;
         }
 
         .features li {
             position: relative;
-            padding-left: 20px;
+            padding-left: 20px; /* 불릿 공간 확보 */
             margin-bottom: 12px;
             line-height: 1.6;
             font-size: 0.95rem;
         }
 
         .features li::before {
-            content: "•";
+            content: "•"; /* 커스텀 불릿 */
             position: absolute;
             left: 0;
             font-weight: bold;
@@ -129,7 +134,7 @@
         footer {
             margin-top: 50px;
             font-size: 0.9rem;
-            color: #999;
+            color: #999; /* 연한 회색 */
             line-height: 1.6;
         }
     </style>
@@ -148,6 +153,7 @@
             
             <div class="project-box">
                 <h3 class="project-name">🌦️ 날씨 알리미: 파이썬과 OpenWeather API 기반</h3>
+                
                 <p class="description">
                     파이썬(Python)과 OpenWeather API를 이용하여 사용자에게 실시간 날씨 정보를 제공하는 스마트 날씨 알림 시스템을 개발하고 사용자의 위치를 기반으로 하거나 특정 도시를 검색하여 기온, 습도, 풍속, 예보 등의 상세 날씨 데이터를 조회할 수 있는 기능을 구현 중입니다.
                 </p>
