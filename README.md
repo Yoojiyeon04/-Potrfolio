@@ -1,66 +1,167 @@
-import requests
-import sqlite3
-from datetime import datetime
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유지연 - 졸업작품</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-# 1. 데이터베이스 설정 (SQLite)
-def init_db():
-    conn = sqlite3.connect('weather_data.db')
-    cursor = conn.cursor()
-    # 날씨 정보를 저장할 테이블 생성
-    cursor.execute('''
-        CREATE TABLE IF NOT EXISTS weather_history (
-            id INTEGER PRIMARY KEY AUTOINCREMENT,
-            city TEXT,
-            temp REAL,
-            description TEXT,
-            humidity INTEGER,
-            date TEXT
-        )
-    ''')
-    conn.commit()
-    return conn
+    <div class="container">
+        <header>
+            <h1>유지연 (Yoo ji-yeon)</h1>
+            <p class="subtitle">컴퓨터공학과 23학번</p>
+            <hr class="header-line">
+        </header>
 
-# 2. 날씨 API 데이터 가져오기 (OpenWeatherMap 기준)
-def get_weather(city_name, api_key):
-    url = f"http://api.openweathermap.org/data/2.5/weather?q={city_name}&appid={api_key}&units=metric&lang=kr"
-    response = requests.get(url)
-    
-    if response.status_code == 200:
-        return response.json()
-    else:
-        print("데이터를 가져오는 데 실패했습니다.")
-        return None
+        <main class="card">
+            <h2 class="section-title">졸업작품</h2>
+            
+            <div class="project-box">
+                <h3 class="project-name">🌦️ 날씨 알리미: 파이썬과 OpenWeather API 기반</h3>
+                <p class="description">
+                    파이썬(Python)과 OpenWeather API를 이용하여 사용자에게 실시간 날씨 정보를 제공하는 스마트 날씨 알림 시스템을 개발하고 사용자의 위치를 기반으로 하거나 특정 도시를 검색하여 기온, 습도, 풍속, 예보 등의 상세 날씨 데이터를 조회할 수 있는 기능을 구현 중입니다.
+                </p>
 
-# 3. DB에 데이터 저장하기
-def save_to_db(conn, city, data):
-    cursor = conn.cursor()
-    now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-    
-    temp = data['main']['temp']
-    desc = data['weather'][0]['description']
-    hum = data['main']['humidity']
-    
-    cursor.execute('''
-        INSERT INTO weather_history (city, temp, description, humidity, date)
-        VALUES (?, ?, ?, ?, ?)
-    ''', (city, temp, desc, hum, now))
-    
-    conn.commit()
-    print(f"[{now}] {city}의 날씨 정보가 DB에 저장되었습니다.")
+                <div class="tags">
+                    <span>Python</span>
+                    <span>OpenWeather API</span>
+                    <span>API Integration</span>
+                    <span>Data Parsing</span>
+                    <span>UI Development</span>
+                </div>
 
-# --- 메인 실행부 ---
-if __name__ == "__main__":
-    API_KEY = "본인의_API_키를_입력하세요"  # OpenWeatherMap에서 발급받은 키
-    CITY = "Seoul"
-    
-    db_conn = init_db()
-    weather_json = get_weather(CITY, API_KEY)
-    
-    if weather_json:
-        save_to_db(db_conn, CITY, weather_json)
-        
-        # 저장된 데이터 확인용 출력
-        print(f"현재 온도: {weather_json['main']['temp']}°C")
-        print(f"날씨 상태: {weather_json['weather'][0]['description']}")
+                <ul class="features">
+                    <li><strong>실시간 데이터 연동:</strong> OpenWeather API와의 안정적인 통신 및 데이터 업데이트.</li>
+                    <li><strong>다양한 정보 제공:</strong> 기온, 습도, 체감 온도, 강수 확률 등 포괄적 정보.</li>
+                    <li><strong>사용자 친화적 UI:</strong> 누구나 쉽게 사용할 수 있는 직관적인 인터페이스 설계.</li>
+                </ul>
+            </div>
+        </main>
 
-    db_conn.close()
+        <footer>
+            <p>© 2026 Yoo ji-yeon | Halla University</p>
+            <p>Department of Computer Science and Engineering</p>
+        </footer>
+    </div>
+
+</body>
+</html>
+
+/* 기본 폰트 및 배경 설정 */
+body {
+    background-color: #f4f7f9;
+    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    text-align: center;
+}
+
+/* 헤더 스타일 */
+header h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+header .subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.header-line {
+    border: 0;
+    height: 2px;
+    background-color: #2c3e50;
+    margin-bottom: 40px;
+}
+
+/* 카드 박스 스타일 */
+.card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 40px;
+    text-align: left;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    border-left: 5px solid #2c3e50;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+.project-box {
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 30px;
+}
+
+.project-name {
+    font-size: 1.3rem;
+    margin-top: 0;
+}
+
+.description {
+    line-height: 1.6;
+    color: #444;
+    margin-bottom: 20px;
+}
+
+/* 태그 스타일 */
+.tags {
+    margin-bottom: 25px;
+}
+
+.tags span {
+    display: inline-block;
+    background-color: #e1f0ff;
+    color: #007bff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+/* 리스트 스타일 */
+.features {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    position: relative;
+    padding-left: 20px;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.features li::before {
+    content: "•";
+    position: absolute;
+    left: 0;
+    color: #333;
+    font-weight: bold;
+}
+
+/* 푸터 스타일 */
+footer {
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color: #888;
+    line-height: 1.5;
+}
