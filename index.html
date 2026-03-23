@@ -4,7 +4,135 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>유지연 - 졸업작품</title>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        /* 1. 기본 스타일 설정 */
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+            color: #333;
+            margin: 0;
+            padding: 50px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 850px;
+            text-align: center;
+        }
+
+        /* 2. 헤더 영역 스타일 */
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+        }
+
+        header .subtitle {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 25px;
+        }
+
+        .header-line {
+            border: 0;
+            height: 2px;
+            background-color: #2c3e50;
+            margin-bottom: 50px;
+            width: 100%;
+        }
+
+        /* 3. 메인 카드(흰색 박스) 스타일 */
+        .card {
+            background-color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            padding: 45px;
+            text-align: left;
+        }
+
+        .section-title {
+            font-size: 1.6rem;
+            border-left: 6px solid #2c3e50;
+            padding-left: 15px;
+            margin-bottom: 30px;
+            font-weight: bold;
+        }
+
+        /* 4. 내부 프로젝트 박스 */
+        .project-box {
+            border: 1px solid #eee;
+            border-radius: 10px;
+            padding: 30px;
+        }
+
+        .project-name {
+            font-size: 1.35rem;
+            margin-top: 0;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .description {
+            line-height: 1.7;
+            color: #555;
+            margin-bottom: 25px;
+            word-break: keep-all;
+        }
+
+        /* 5. 태그(버튼 형태) 스타일 */
+        .tags {
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .tags span {
+            background-color: #e8f2ff;
+            color: #007bff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+
+        /* 6. 리스트 스타일 */
+        .features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .features li {
+            position: relative;
+            padding-left: 20px;
+            margin-bottom: 12px;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .features li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+            color: #333;
+        }
+
+        /* 7. 푸터 스타일 */
+        footer {
+            margin-top: 50px;
+            font-size: 0.9rem;
+            color: #999;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
 
@@ -48,120 +176,3 @@
 
 </body>
 </html>
-
-/* 기본 폰트 및 배경 설정 */
-body {
-    background-color: #f4f7f9;
-    font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
-    color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-}
-
-.container {
-    width: 90%;
-    max-width: 900px;
-    text-align: center;
-}
-
-/* 헤더 스타일 */
-header h1 {
-    font-size: 2rem;
-    margin-bottom: 5px;
-}
-
-header .subtitle {
-    font-size: 1.1rem;
-    color: #666;
-    margin-bottom: 20px;
-}
-
-.header-line {
-    border: 0;
-    height: 2px;
-    background-color: #2c3e50;
-    margin-bottom: 40px;
-}
-
-/* 카드 박스 스타일 */
-.card {
-    background-color: white;
-    border-radius: 12px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    padding: 40px;
-    text-align: left;
-}
-
-.section-title {
-    font-size: 1.5rem;
-    border-left: 5px solid #2c3e50;
-    padding-left: 15px;
-    margin-bottom: 25px;
-}
-
-.project-box {
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 30px;
-}
-
-.project-name {
-    font-size: 1.3rem;
-    margin-top: 0;
-}
-
-.description {
-    line-height: 1.6;
-    color: #444;
-    margin-bottom: 20px;
-}
-
-/* 태그 스타일 */
-.tags {
-    margin-bottom: 25px;
-}
-
-.tags span {
-    display: inline-block;
-    background-color: #e1f0ff;
-    color: #007bff;
-    padding: 6px 14px;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    margin-right: 8px;
-    margin-bottom: 8px;
-    font-weight: 600;
-}
-
-/* 리스트 스타일 */
-.features {
-    list-style: none;
-    padding: 0;
-}
-
-.features li {
-    position: relative;
-    padding-left: 20px;
-    margin-bottom: 10px;
-    line-height: 1.5;
-}
-
-.features li::before {
-    content: "•";
-    position: absolute;
-    left: 0;
-    color: #333;
-    font-weight: bold;
-}
-
-/* 푸터 스타일 */
-footer {
-    margin-top: 40px;
-    font-size: 0.9rem;
-    color: #888;
-    line-height: 1.5;
-}
