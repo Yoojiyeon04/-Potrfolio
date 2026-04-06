@@ -1,4 +1,3 @@
-/* 컴퓨터공학과 졸업작품에 대한 코드 */
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -45,11 +44,16 @@
             font-weight: 700;
         } 
 
-        .project-box { border: 1px solid #eee; border-radius: 8px; padding: 25px; } 
+        .project-box { 
+            border: 1px solid #eee; 
+            border-radius: 8px; 
+            padding: 25px; 
+            margin-bottom: 40px; /* 박스 간의 간격 추가 */
+        } 
         .project-name { font-size: 1.25rem; margin-top: 0; margin-bottom: 15px; font-weight: 700; } 
         .description { line-height: 1.7; color: #555; margin-bottom: 20px; word-break: keep-all; } 
 
-        .tags { margin-bottom: 25px; display: flex; flex-wrap: wrap; gap: 8px; } 
+        .tags { margin-bottom: 0; display: flex; flex-wrap: wrap; gap: 8px; } 
         .tags span { 
             background-color: #eef6ff; 
             color: #007bff; 
@@ -59,11 +63,7 @@
             font-weight: 600; 
         } 
 
-        .features { list-style: none; padding: 0; margin: 0; } 
-        .features li { position: relative; padding-left: 20px; margin-bottom: 10px; font-size: 0.95rem; } 
-        .features li::before { content: "•"; position: absolute; left: 0; font-weight: bold; } 
-
-        footer { margin-top: 50px; font-size: 0.85rem; color: #aaa; line-height: 1.6; }
+        footer { margin-top: 50px; font-size: 0.85rem; color: #aaa; line-height: 1.6; text-align: center; }
     </style>
 </head>
 <body>
@@ -77,11 +77,10 @@
 
         <main class="card">
             <h2 class="section-title">졸업작품</h2>
-            
             <div class="project-box">
                 <h3 class="project-name">🌦️ 날씨 알리미: 파이썬과 OpenWeather API 기반</h3>
                 <p class="description">
-                    파이썬(Python)과 OpenWeather API를 이용하여 사용자에게 실시간 날씨 정보를 제공하는 스마트 날씨 알림 시스템을 개발하고 사용자의 위치를 기반으로 하거나 특정 도시를 검색하여 기온, 습도, 풍속, 예보 등의 상세 날씨 데이터를 조회할 수 있는 기능을 구현 중입니다.
+                    파이썬(Python)과 OpenWeather API를 이용하여 사용자에게 실시간 날씨 정보를 제공하는 스마트 날씨 알림 시스템을 개발하고 있습니다. 사용자의 위치를 기반으로 하거나 특정 도시를 검색하여 기온, 습도, 풍속, 예보 등의 상세 날씨 데이터를 조회할 수 있는 기능을 구현 중입니다.
                 </p>
 
                 <div class="tags">
@@ -91,10 +90,9 @@
                     <span>Data Parsing</span>
                     <span>UI Development</span>
                 </div>
+            </div>
 
-/* 동아리 활동에 대한 코드 */
-                <br><br> <h2 class="section-title">동아리 활동</h2>
-            
+            <h2 class="section-title">동아리 활동</h2>
             <div class="project-box">
                 <h3 class="project-name">📊 주주동아리</h3>
                 <p class="description">
@@ -108,3 +106,12 @@
                     <span>주주동아리</span>
                 </div>
             </div>
+        </main>
+
+        <footer>
+            <p>&copy; 2024 Yoo ji-yeon. All rights reserved.</p>
+        </footer>
+    </div>
+
+</body>
+</html>
