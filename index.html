@@ -49,16 +49,25 @@
             margin-bottom: 25px; 
             margin-top: 40px; 
             font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 15px; /* 타이틀과 날짜 사이 간격 */
         } 
 
         .section-title:first-child { margin-top: 0; }
 
-        .section-title.red-line {
-            border-left-color: #ff4d4d;
-        }
+        .section-title.red-line { border-left-color: #ff4d4d; }
+        .section-title.orange-line { border-left-color: #ffa502; }
+        .section-title.black-line { border-left-color: #333; }
 
-        .section-title.orange-line {
-            border-left-color: #ffa502;
+        /* --- 노란색 날짜 뱃지 스타일 --- */
+        .date-badge {
+            background-color: #ffeaa7; /* 연한 노란색 */
+            color: #d6a01d; /* 진한 노란색 텍스트 */
+            font-size: 0.85rem;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-weight: 600;
         }
 
         .project-box { 
@@ -83,6 +92,8 @@
             font-size: 0.85rem; 
             font-weight: 600; 
         } 
+        
+        .tags .tag-cert { background-color: #f1f2f6; color: #2f3542; }
 
         footer { margin-top: 50px; font-size: 0.85rem; color: #aaa; line-height: 1.6; text-align: center; }
     </style>
@@ -97,46 +108,44 @@
         </header>
 
         <main class="card">
+            <!-- 졸업작품 -->
             <h2 class="section-title red-line">졸업작품</h2>
-            
             <div class="project-box">
                 <h3 class="project-name">🌦️ 날씨 알리미: 파이썬과 OpenWeather API 기반</h3>
                 <p class="description">
-                    파이썬(Python)과 OpenWeather API를 이용하여 사용자에게 실시간 날씨 정보를 제공하는 스마트 날씨 알림 시스템을 개발하고 있습니다. 사용자의 위치를 기반으로 하거나 특정 도시를 검색하여 상세 날씨 데이터를 조회할 수 있는 기능을 구현 중입니다.
+                    파이썬(Python)과 OpenWeather API를 이용하여 사용자에게 실시간 날씨 정보를 제공하는 스마트 날씨 알림 시스템을 개발하고 있습니다.
                 </p>
                 <div class="tags">
                     <span>Python</span>
                     <span>OpenWeather API</span>
-                    <span>API Integration</span>
                 </div>
             </div>
 
+            <!-- 동아리 활동 -->
             <h2 class="section-title orange-line">동아리 활동</h2>
-            
             <div class="project-box">
                 <h3 class="project-name">📊 주주동아리</h3>
                 <p class="description">
-                    타학과 학생으로서 소속되어 빅데이터 관련 활동을 활발히 진행 중입니다. 특히 데이터 라벨링 작업을 통해 복잡한 수치 데이터를 직관적으로 시각화하여 한눈에 파악할 수 있도록 구현하는 활동을 하고 있습니다. 다양한 전공의 학생들과 교류하며 데이터 분석 및 활용에 대한 실무적인 시야를 넓혀가는 중입니다.
+                    데이터 라벨링 작업을 통해 복잡한 수치 데이터를 직관적으로 시각화하여 한눈에 파악할 수 있도록 구현하는 활동을 하고 있습니다.
                 </p>
                 <div class="tags">
                     <span>Big Data</span>
-                    <span>데이터 분석</span>
-                    <span>주주동아리</span>
                     <span>데이터 라벨링</span>
-                    <span>데이터 시각화</span>
                 </div>
             </div>
 
+            <!-- 자격증 섹션 (날짜 추가) -->
+            <h2 class="section-title black-line">
+                자격증 <span class="date-badge">2026-05-13</span>
+            </h2>
             <div class="project-box">
-                <h3 class="project-name">🎨 MANIA</h3>
+                <h3 class="project-name">🥋 합기도 3단 단증</h3>
                 <p class="description">
-                    그림부 부원으로 활동하며 예술적 감각을 기르고, 관련 전공은 아니지만 다양한 전공의 사람들과 자유롭게 소통하며 풍요로운 취미 생활을 즐겼습니다. 
+                    오랜 기간 꾸준한 수련을 통해 합기도 3단을 취득하였습니다. 무술 수련을 통해 목표를 향한 인내심과 강한 정신력을 길러왔습니다.
                 </p>
                 <div class="tags">
-                    <span>Drawing</span>
-                    <span>Networking</span>
-                    <span>취미 활동</span>
-                    <span>MANIA</span>
+                    <span class="tag-cert">공인 단증</span>
+                    <span class="tag-cert">합기도 3단</span>
                 </div>
             </div>
         </main>
